@@ -1,0 +1,398 @@
+/* ================= GLOBAL ================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  transition: all 0.3s ease;
+}
+
+body {
+  background: #f4f6fb;
+  color: #222;
+}
+
+/* Dark Mode */
+.dark {
+  background: #0f172a;   /* Deep navy */
+  color: #e2e8f0;
+  min-height: 100vh;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 8%;
+  background: white;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+}
+
+.dark .navbar {
+  background: #1e293b;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: #2563eb;   /* Modern blue */
+}
+
+.dark .logo {
+  color: #38bdf8;   /* Light blue for dark */
+}
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+.nav-links span {
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.nav-links span:hover {
+  color: #2563eb;
+}
+
+.dark .nav-links span:hover {
+  color: #38bdf8;
+}
+
+/* ================= TOGGLE BUTTON (NEW STYLE) ================= */
+
+button {
+  padding: 8px 20px;
+  border-radius: 30px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  background: linear-gradient(45deg, #2563eb, #7c3aed);
+  color: white;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+}
+
+.dark button {
+  background: linear-gradient(45deg, #38bdf8, #6366f1);
+  color: white;
+}
+
+/* ================= PAGE CONTAINER ================= */
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+  padding: 80px 0;
+  text-align: center;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ================= HEADINGS ================= */
+
+section h2 {
+  font-size: 38px;
+  margin-bottom: 30px;
+  font-weight: 800;
+  color: #2563eb;
+}
+
+.dark section h2 {
+  color: #38bdf8;
+}
+
+/* ================= HERO ================= */
+
+.hero h1 {
+  font-size: 46px;
+  margin-bottom: 20px;
+}
+
+.hero span {
+  color: #2563eb;
+}
+
+.dark .hero span {
+  color: #38bdf8;
+}
+
+.hero p {
+  font-size: 20px;
+  line-height: 1.8;
+}
+
+/* ================= ABOUT ================= */
+
+.about-description {
+  font-size: 22px;
+  line-height: 1.9;
+  max-width: 950px;
+  margin: 0 auto 35px auto;
+  font-weight: 500;
+}
+
+.core-strength-table {
+  margin: 60px auto 0 auto;
+  padding: 35px;
+  border-radius: 15px;
+  background: white;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  max-width: 800px;
+}
+
+.dark .core-strength-table {
+  background: #1e293b;
+}
+
+.core-strength-table td {
+  font-size: 18px;
+  padding: 15px;
+  border: 1px solid #e5e7eb;
+  text-align: center;
+}
+
+.dark .core-strength-table td {
+  border: 1px solid #334155;
+}
+
+/* ================= SKILLS ================= */
+
+.skills-wrapper {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.skill-table {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  width: 320px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+.dark .skill-table {
+  background: #1e293b;
+}
+
+.skill-table h3 {
+  margin-bottom: 15px;
+  color: #2563eb;
+}
+
+.dark .skill-table h3 {
+  color: #38bdf8;
+}
+
+.skill-table td {
+  padding: 12px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.dark .skill-table td {
+  border-bottom: 1px solid #334155;
+}
+
+/* ================= PROJECTS ================= */
+
+.card-container {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: white;
+  padding: 25px;
+  width: 280px;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  transition: 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+}
+
+.dark .card {
+  background: #1e293b;
+}
+
+/* ================= CONTACT ================= */
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 450px;
+  margin: auto;
+}
+
+input, textarea {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  font-size: 15px;
+}
+
+.dark input,
+.dark textarea {
+  background: #1e293b;
+  border: 1px solid #334155;
+  color: white;
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+
+  section h2 {
+    font-size: 26px;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .about-description {
+    font-size: 17px;
+  }
+
+  .core-strength-table td {
+    font-size: 14px;
+  }
+
+  .skills-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.core-strength-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.core-strength-table {
+  width: 700px;
+  max-width: 95%;
+  padding: 30px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  text-align: center;
+}
+
+.dark .core-strength-table {
+  background: #1e293b;
+}
+
+.core-strength-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.core-strength-table td {
+  padding: 15px;
+  text-align: center;   /* Center content */
+  border: 1px solid #e5e7eb;
+}
+
+.dark .core-strength-table td {
+  border: 1px solid #334155;
+}
+
+.skill-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.skill-table td {
+  padding: 14px;
+  text-align: center;   /* THIS centers content */
+  font-weight: 500;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.dark .skill-table td {
+  border-bottom: 1px solid #334155;
+}
+/* ===== HOME SECTION ===== */
+
+.hero h1 {
+  font-size: 48px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.hero span {
+  color: #2563eb;
+}
+
+.dark .hero span {
+  color: #38bdf8;
+}
+
+.home-subtitle {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 25px;
+  color: #475569;
+}
+
+.dark .home-subtitle {
+  color: #94a3b8;
+}
+
+.home-description {
+  font-size: 20px;
+  line-height: 1.8;
+  max-width: 850px;
+  margin: 0 auto 20px auto;
+}
+
+.home-buttons {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.home-buttons button {
+  padding: 10px 24px;
+  border-radius: 25px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(45deg, #2563eb, #7c3aed);
+  color: white;
+}
+
+.home-buttons button:hover {
+  transform: scale(1.05);
+}
