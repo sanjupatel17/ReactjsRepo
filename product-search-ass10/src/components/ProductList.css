@@ -1,0 +1,44 @@
+.filter-container {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 20px;
+  flex-wrap: wrap;
+}
+
+.filter-container input,
+.filter-container select {
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.filter-container input:focus,
+.filter-container select:focus {
+  border-color: #2b7cff;
+  box-shadow: 0 0 5px rgba(43, 124, 255, 0.5);
+}
+
+.filter-container input[type="text"] {
+  width: 250px;
+}
+
+.filter-container input[type="number"] {
+  width: 120px;
+}
+
+.filter-container select {
+  cursor: pointer;
+  background-color: white;
+}
+
+.product-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 20px 40px;
+}
+
